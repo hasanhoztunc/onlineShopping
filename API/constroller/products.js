@@ -7,7 +7,7 @@ exports.products_get_all = async (req, res, next) => {
 		return res.status(200).json(getAll.rows);
 	} catch (err) {
 		return res.status(500).json({
-			error: err,
+			error: err
 		});
 	}
 };
