@@ -1,18 +1,44 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+    <div class="home">
+        <top-nav />
+        <navBar />
+        <div class="caro">
+            <carouselTypes />
+            <carousel />
+        </div>
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import navBar from '@/components/index/navBar'
+import topNav from '../components/index/topNav'
+import carouselTypes from '../components/index/carouselTypes'
+import carousel from '@/components/utils/carousel'
 export default {
-  name: "Home",
-  components: {
-    HelloWorld
-  }
-};
+    name: 'Home',
+    components: {
+        topNav,
+        carousel,
+        navBar,
+        carouselTypes
+    },
+}
 </script>
+<style scoped>
+.test {
+    background: #fff;
+    color: #ddd;
+}
+    .home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #555;
+    }
+    .caro {
+        background-image: linear-gradient(#aaa8a8, #dbd9d8);
+        padding: 0px 0px 65px 0px;
+        width: 100%;
+    }
+</style>
