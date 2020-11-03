@@ -11,6 +11,9 @@
         <div class="onDiscount">
             <onDiscount />
         </div>
+        <div class="categoryAdversitement">
+            <categoryAdvertisement />
+        </div>
     </div>
 </template>
 
@@ -20,6 +23,7 @@ import topNav from '../components/index/topNav'
 import carouselTypes from '../components/index/carouselTypes'
 import carousel from '@/components/utils/carousel'
 import onDiscount from '../components/index/onDiscount'
+import categoryAdvertisement from '../components/index/categoryAdvertisement'
 
 export default {
     name: 'Home',
@@ -28,7 +32,8 @@ export default {
         carousel,
         navBar,
         carouselTypes,
-        onDiscount
+        onDiscount,
+        categoryAdvertisement
     },
 }
 </script>
@@ -54,6 +59,12 @@ export default {
         width: 70%;
     }
     .onDiscount {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    .categoryAdversitement {
         display: flex;
         flex-direction: row;
         justify-content: center;
