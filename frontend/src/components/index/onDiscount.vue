@@ -8,9 +8,12 @@
         </div>
         <div class="content">
             <div class="advertisement">
-                a
+                <advertisement />
             </div>
             <div class="onDicountItems">
+                <productLong />
+                <productLong />
+                <productLong />
                 <productLong />
             </div>
         </div>
@@ -18,11 +21,14 @@
 </template>
 
 <script>
-import productLong from '../product/productLong'
+import productLong from '@/components/index/product/productLong'
+import advertisement from './product/advertisement'
+
 export default {
     name: 'OnDiscount',
     components: {
-        productLong
+        productLong,
+        advertisement
     }
 }
 </script>
@@ -59,5 +65,18 @@ export default {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+    }
+    .advertisement {
+        display: flex;
+        margin: 10px 10px 10px 0px;
+    }
+    .advertisement div {
+    }
+    .onDicountItems {
+        display: flex;
+        flex-direction: row;
+    }
+    .onDicountItems div {
+        margin: 10px;
     }
 </style>
