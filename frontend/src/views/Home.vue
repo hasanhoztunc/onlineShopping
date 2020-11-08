@@ -14,6 +14,15 @@
         <div class="categoryAdversitement">
             <categoryAdvertisement />
         </div>
+        <div class="legendBrandsWrapper">
+            <legendBrands />
+        </div>
+        <div class="services">
+            <services />
+        </div>
+        <div class="outstandings">
+            <outstandings />
+        </div>
     </div>
 </template>
 
@@ -24,6 +33,9 @@ import carouselTypes from '../components/index/carouselTypes'
 import carousel from '@/components/utils/carousel'
 import onDiscount from '../components/index/onDiscount'
 import categoryAdvertisement from '../components/index/categoryAdvertisement'
+import legendBrands from '../components/index/legendBrands'
+import services from '../components/index/services'
+import outstandings from '../components/index/outstandings'
 
 export default {
     name: 'Home',
@@ -33,7 +45,10 @@ export default {
         navBar,
         carouselTypes,
         onDiscount,
-        categoryAdvertisement
+        categoryAdvertisement,
+        legendBrands,
+        services,
+        outstandings
     },
 }
 </script>
@@ -65,6 +80,24 @@ export default {
         width: 100%;
     }
     .categoryAdversitement {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    .legendBrandsWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    .services {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    .outstandings {
         display: flex;
         flex-direction: row;
         justify-content: center;
