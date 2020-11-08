@@ -7,7 +7,7 @@
             <customInput v-model="search" right-button-text="Ara" :placeholder="$t('SEARCH_PLACEHOLDER')" />
         </div>
         <div class="buttons">
-            <div class="button">
+            <div class="buttonSign">
                 <CustomButton
                     text="Giriş Yap"
                     under-text="veya üye ol"
@@ -18,6 +18,19 @@
                     text-color="#919191"
                     @click="login"
                 />
+                <div class="signOptions">
+                    <div class="optionsWrapper">
+                        <div class="option">
+                            {{ $t('LOGIN') }}
+                        </div>
+                        <div class="option">
+                            {{ $t('SIGN_UP') }}
+                        </div>
+                        <div class="option">
+                            {{ $t('MY_ACCOUNT') }}
+                        </div>
+                    </div>
+                </div>
             </div>
             <div>
                 <CustomButton
@@ -86,5 +99,29 @@ export default {
     }
     .buttons div {
         margin: 0px 5px;
+    }
+    .buttonSign {
+        display: flex;
+        position: relative;
+    }
+    .buttonSign:hover .signOptions {
+        display: unset;
+    }
+    .signOptions {
+        display: none;
+        position: absolute;
+        z-index: 9999;
+        background: #fff;
+        border-radius: 8px;
+        top: 100%;
+        width: 100%;
+        box-shadow: 0px 1px 2px #00000040;
+    }
+    .option {
+        font-size: 13px;
+        padding: 8px 20px;
+        text-align: left;
+        font-weight: 700;
+        cursor: pointer;
     }
 </style>

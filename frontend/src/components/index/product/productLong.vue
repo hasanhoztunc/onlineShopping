@@ -46,7 +46,7 @@ export default {
     }
     .product:hover .productPrice {
         display: none;
-        transition: 0.3s all ease-in-out;
+        transition: 0.3s all ;
     }
     .productPriceWithDiscount {
         margin-top: 20px;
