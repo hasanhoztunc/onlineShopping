@@ -1,8 +1,8 @@
 <template>
-    <div class="input" @click="$emit('inputFocus')">
+    <div class="input" :style="inputStyle" @click="$emit('inputFocus')">
         <label @cinputFocus="focus">{{ label }}<span v-if="required">*</span></label>
         <div class="inputIcons">
-            <div class="icon">
+            <div v-if="leftIcon" class="icon">
                 <search color="#adadad" />
             </div>
             <input
@@ -19,6 +19,9 @@
                 :class="{focused: focused}"
             >
                 {{ rightButtonText }}
+            </div>
+            <div v-if="rightIcon !== undefined" class="rightIcon">
+                <component :is="rightIconComp" />
             </div>
         </div>
     </div>
@@ -59,15 +62,36 @@ export default {
                 return undefined
             }
         },
+        leftIcon: Boolean,
         rightButtonText: {
             type: String,
             default: undefined
-        }
+        },
+        rightIcon: {
+            type: String,
+            default: undefined
+        },
+        height: {
+            type: String,
+            default: '30px'
+        },
     },
     data () {
         return {
             data: '',
             message: undefined,
+        }
+    },
+    computed: {
+        inputStyle () {
+            return `height: ${this.height};`
+        },
+        rightIconComp () {
+            if (this.rightIcon !== undefined) {
+                return () => import('@/assets/' + this.rightIcon)
+            } else {
+                return ''
+            }
         }
     },
     watch: {
@@ -158,5 +182,11 @@ export default {
         flex: 1;
         font-size: 16px;
         padding: 0px 10px;
+    }
+    .rightIcon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 10px;
     }
 </style>

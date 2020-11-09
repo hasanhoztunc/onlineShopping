@@ -25,5 +25,7 @@
   "DISCOUNT_ON_CART": "Sepette %10 indirimli fiyat",
   "LOGIN": "Giriş Yap",
   "SIGN_UP": "Üye Ol",
-  "MY_ACCOUNT": "Hesabım"
+  "MY_ACCOUNT": "Hesabım",
+  "MAIL": "E-Mail",
+  "PASSWORD": "Şifre"
 }
