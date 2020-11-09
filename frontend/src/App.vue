@@ -11,9 +11,11 @@
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
 		color: #2c3e50;
-	}
+        height: auto;
+    }
     html,body {
         margin: 0px !important;
+        height: auto;
     }
     * {
         box-sizing: border-box;
